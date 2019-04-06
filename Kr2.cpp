@@ -6,6 +6,7 @@ using namespace std;
 int fuu2(string &s, int j, char b,int x,int y,int z)
 {
 	int k;
+	j++;
 	for(;j<s.length();j++)
 	{
 		char a=s[j];
@@ -37,11 +38,9 @@ int fuu(string &s,int j,int x,int y,int z)
 	for(;j<s.length();j++)
 	{
 		char a=s[j];
-		cout << a;
 		if (a=='('||a=='['||a=='"')
 		{
 		k=fuu2(s,j,a,x,y,z);
-		cout << a;
 		}
 		else if(a==')'||a==']'||k==0)
 		return 0;
