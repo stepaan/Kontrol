@@ -11,19 +11,16 @@ int fuu2(string &s, int j, char b,int x,int y,int z)
 		char a=s[j];
 		if (b=='('||a==')')
 		{
-			cout << a;
 			x++;
 			return 1;
 		}
 		else if  (b=='['||a==']')
 		{
-			cout << a;
 			y++;
 			return 1;
 		}
 		else if(b=='"'||a=='"')
 		{
-			cout << a;
 			z++;
 			return 1;
 		}
@@ -49,9 +46,7 @@ int fuu(string &s,int j,int x,int y,int z)
 		else if(a==')'||a==']'||k==0)
 		return 0;
 	}
-	cout << 'a';
 	return 1;
-	
 }
 
 int main ()
@@ -67,7 +62,9 @@ int main ()
     k=fuu(line, 0, x,y,z);
     ofstream output("results.txt");
     if (k==0)
+    {
     output << "no balansed\n";
+    }
 	else
 	{
 		output << "():" << x << "\n";
